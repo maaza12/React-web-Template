@@ -71,3 +71,5 @@ const Categories = () => {
 };
 
 export default Categories;
+
+// Categories
