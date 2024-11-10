@@ -1,13 +1,14 @@
 // src/App.js
 import React from 'react';
 import './App.css';
-import LoginPage from './pages/LoginPage';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from './Routes';
 
 function App() {
   return (
-    <div>
-      <LoginPage />
-    </div>
+    <Router>
+    <AppRoutes /> {/* Using AppRoutes to handle all routes */}
+   </Router>
   );
 }
 

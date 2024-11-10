@@ -1,0 +1,125 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Ensure that icons are on the opposite side */
+  margin-right: 50px;
+  position: relative;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin-right: 100px;
+  gap: 75px;
+}
+
+.nav-item {}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  background: none;
+}
+
+.nav-link:hover {
+  color: #ddd;
+}
+
+.icon {
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.icon:hover {
+  color: #ddd;
+}
+
+/* Burger Icon */
+.burger-icon {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-left: 20px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.burger-icon.open {
+  color: #ddd;
+}
+
+/* For tablet and small screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .header-title {
+    font-size: 20px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 100%; /* Ensure header title takes full width */
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; /* Ensure nav takes full width */
+    margin-right: 0;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 20px;
+    display: none; /* Hide the menu by default */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1;
+  }
+
+  .nav-list.open {
+    display: flex; /* Show the menu when open */
+  }
+
+  .burger-icon {
+    display: block; /* Show burger icon */
+  }
+
+  .icon {
+    font-size: 1.5em;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

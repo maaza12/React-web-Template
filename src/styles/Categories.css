@@ -1,0 +1,114 @@
+/* Categories Container */
+.categories-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden; /* Hide any content that overflows */
+  }
+  
+  /* Scrollable Area for Categories */
+  .categories-scroll {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px; /* Increased space between categories */
+    overflow: hidden; /* Hide categories outside of the visible area */
+    transition: transform 0.3s ease;
+  }
+  
+  /* Category Item Styling */
+  .category-item {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    width: 150px; /* Fixed width for each category item */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .category-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Category Image Styling */
+  .category-image {
+    width: 100%;
+    height: 150px; /* Fixed height for the image */
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  /* Category Name Styling */
+  .category-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  /* Arrow Button Styling */
+  .arrow {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 5px; /* For better click area */
+  }
+  
+  .left-arrow {
+    left: 50px; /* Adjust left position */
+  }
+  
+  .right-arrow {
+    right: 70px; /* Adjust right position */
+  }
+  
+  .arrow:hover {
+    color: #ddd;
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablet view (Max width: 1024px) */
+  @media (max-width: 1024px) {
+    .category-item {
+      width: 130px; /* Smaller width for tablets */
+    }
+  
+    .arrow {
+      font-size: 25px; /* Smaller arrows for tablet view */
+    }
+  }
+  
+  /* Mobile view (Max width: 768px) */
+  @media (max-width: 768px) {
+    .category-item {
+      width: 120px; /* Even smaller for mobile */
+    }
+  
+    .arrow {
+      font-size: 20px; /* Even smaller arrows for mobile view */
+    }
+  }
+  
+  /* Very small screen view (Max width: 480px) */
+  @media (max-width: 480px) {
+    .category-item {
+      width: 100px; /* Even smaller for very small screens */
+    }
+  
+    .arrow {
+      font-size: 18px; /* Smaller arrows for very small screens */
+    }
+  }
+  
