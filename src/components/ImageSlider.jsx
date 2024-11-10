@@ -26,3 +26,5 @@ const ImageSlider = () => {
 }
 
 export default ImageSlider
+
+// image Slider file 
