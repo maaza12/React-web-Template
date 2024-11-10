@@ -8,7 +8,7 @@ const Header = ({ onHomeClick, onNewSectionClick }) => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+//  this is header
   return (
     <header className="header">
       <h1 className="header-title">My App</h1>
