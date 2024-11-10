@@ -59,3 +59,5 @@ const ProductList = () => {
 };
 
 export default ProductList;
+
+// sample products
